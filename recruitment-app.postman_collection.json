@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "85f81a4b-356e-416c-be24-ed51600c1332",
+		"name": "recruitment-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3935201"
+	},
+	"item": [
+		{
+			"name": "Get All Skill",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Skill with Exclude",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/skill?exclude=React.js,Vue.js",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					],
+					"query": [
+						{
+							"key": "exclude",
+							"value": "React.js,Vue.js"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Job Position",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply New Candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Muhamad Syarifudin Abdul Jalal \",\n    \"email\": \"suicideudin@gmail.com\",\n    \"job\": 1,\n    \"phone\": \"083854371172\",\n    \"year\": 2000,\n    \"skills\": [1,2,3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
